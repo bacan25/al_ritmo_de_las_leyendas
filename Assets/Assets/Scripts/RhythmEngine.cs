@@ -8,9 +8,14 @@ public class RhythmEngine : MonoBehaviour
     public float bpm;
     private float beatInterval;
     private float nextBeatTime;
-    
+
     void Start()
     {
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+
         beatInterval = 60f / bpm;
         nextBeatTime = audioSource.time + beatInterval;
         audioSource.Play();

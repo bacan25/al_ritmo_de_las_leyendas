@@ -2,34 +2,74 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Note { public float time; /*...*/ }
+// Definición del enum para las direcciones
+public enum Direction
+{
+    Left,
+    Down,
+    Up,
+    Right
+}
 
 [System.Serializable]
-public class Song { public AudioClip audioClip; public Note[] notes; /*...*/ }
+public class Note
+{
+    public float time;
+    public Direction direction;  // Cambio de int a Direction
+    /*...*/
+}
+
+[System.Serializable]
+public class Song
+{
+    public AudioClip audioClip;
+    public Note[] notes;
+    /*...*/
+}
+
 
 public class LevelManager : MonoBehaviour
 {
-    public Song song;
-    public GameObject notePrefab;
+    public SongAsset songAsset;
+    public GameObject[] notePrefabs;
+    public Transform[] spawnPoints;
     private int nextNoteIndex = 0;
-
+    private RhythmEngine rhythmEngine;
     void Start()
     {
-        RhythmEngine rhythmEngine = GetComponent<RhythmEngine>();
-        rhythmEngine.audioSource.clip = song.audioClip;
-        rhythmEngine.audioSource.Play();
+        // Asume que hay un objeto llamado "AudioManager" que tiene el RhythmEngine y AudioSource
+        GameObject audioManager = GameObject.Find("AudioManager");
+        if (audioManager != null)
+        {
+            rhythmEngine = audioManager.GetComponent<RhythmEngine>();
+            if (rhythmEngine != null && rhythmEngine.audioSource != null)
+            {
+                rhythmEngine.audioSource.clip = songAsset.audioClip;
+                rhythmEngine.audioSource.Play();
+            }
+            else
+            {
+                Debug.LogError("RhythmEngine or AudioSource is not set");
+            }
+        }
+        else
+        {
+            Debug.LogError("AudioManager object not found");
+        }
     }
-
     void Update()
     {
-        RhythmEngine rhythmEngine = GetComponent<RhythmEngine>();
         if (nextNoteIndex < song.notes.Length && rhythmEngine.audioSource.time >= song.notes[nextNoteIndex].time)
         {
-            Vector3 spawnPosition = new Vector3(/*x, y, z*/);  // Define la posición de spawn aquí
-            Instantiate(notePrefab, spawnPosition, Quaternion.identity);
+            Debug.Log("Generating note at time: " + rhythmEngine.audioSource.time);
+            int direction = (int)song.notes[nextNoteIndex].direction;
+            Vector3 spawnPosition = spawnPoints[direction].position;
+            Instantiate(notePrefabs[direction], spawnPosition, Quaternion.identity);
             nextNoteIndex++;
         }
     }
 
+
 }
+
+
