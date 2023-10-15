@@ -30,45 +30,40 @@ public class Song
 
 public class LevelManager : MonoBehaviour
 {
-    public SongAsset songAsset;
+    public SongAsset songAsset; // Asegúrate de que esté declarada así
     public GameObject[] notePrefabs;
     public Transform[] spawnPoints;
     private int nextNoteIndex = 0;
     private RhythmEngine rhythmEngine;
+
     void Start()
     {
-        // Asume que hay un objeto llamado "AudioManager" que tiene el RhythmEngine y AudioSource
-        GameObject audioManager = GameObject.Find("AudioManager");
-        if (audioManager != null)
+        rhythmEngine = GetComponent<RhythmEngine>();
+        if (rhythmEngine != null && rhythmEngine.audioSource != null)
         {
-            rhythmEngine = audioManager.GetComponent<RhythmEngine>();
-            if (rhythmEngine != null && rhythmEngine.audioSource != null)
-            {
-                rhythmEngine.audioSource.clip = songAsset.audioClip;
-                rhythmEngine.audioSource.Play();
-            }
-            else
-            {
-                Debug.LogError("RhythmEngine or AudioSource is not set");
-            }
+            rhythmEngine.audioSource.clip = songAsset.audioClip;
+            rhythmEngine.audioSource.Play();
         }
         else
         {
-            Debug.LogError("AudioManager object not found");
+            Debug.LogError("RhythmEngine or AudioSource is not set");
         }
     }
     void Update()
     {
-        if (nextNoteIndex < song.notes.Length && rhythmEngine.audioSource.time >= song.notes[nextNoteIndex].time)
+        Debug.Log("Rhythm Engine: " + rhythmEngine);
+        Debug.Log("Audio Source: " + rhythmEngine.audioSource);
+        Debug.Log("Song Asset: " + songAsset);
+
+        if (nextNoteIndex < songAsset.notes.Length && rhythmEngine.audioSource.time >= songAsset.notes[nextNoteIndex].time)
         {
-            Debug.Log("Generating note at time: " + rhythmEngine.audioSource.time);
-            int direction = (int)song.notes[nextNoteIndex].direction;
+            Debug.Log("Instantiating Note");
+            int direction = (int)songAsset.notes[nextNoteIndex].direction;
             Vector3 spawnPosition = spawnPoints[direction].position;
             Instantiate(notePrefabs[direction], spawnPosition, Quaternion.identity);
             nextNoteIndex++;
         }
     }
-
 
 }
 
