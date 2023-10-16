@@ -283,16 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 214555141}
-  inputCircles:
-  - {fileID: 8929596621141662650, guid: b6de3d3b0767c3d4cbee54331fb2c091, type: 3}
-  - {fileID: 3821396046991369024, guid: 1ff6918d29e092b43a5bf1666c1afee5, type: 3}
-  - {fileID: 8982441691488557506, guid: 89779570c410fdf4b96f43af238acf1a, type: 3}
-  - {fileID: 5353474557340281678, guid: 3aee1a39d0bddd24f9ffc6e5a5944ac5, type: 3}
-  hitBars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  spawnPoints: []
 --- !u!4 &112889327
 Transform:
   m_ObjectHideFlags: 0
@@ -2082,10 +2073,10 @@ MonoBehaviour:
   - {fileID: 4273111008627078309, guid: 3aee1a39d0bddd24f9ffc6e5a5944ac5, type: 3}
   - {fileID: 2276391237707544695, guid: 89779570c410fdf4b96f43af238acf1a, type: 3}
   spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 163111321}
+  - {fileID: 197348752}
+  - {fileID: 1039548848}
+  - {fileID: 430895296}
 --- !u!114 &1960738052
 MonoBehaviour:
   m_ObjectHideFlags: 0
