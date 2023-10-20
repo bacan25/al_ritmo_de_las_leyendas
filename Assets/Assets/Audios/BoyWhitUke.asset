@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BoyWhitUke
   m_EditorClassIdentifier: 
   song:
+    Name: 
     audioClip: {fileID: 0}
     notes: []
   audioClip: {fileID: 8300000, guid: bd7d7f12e5ce3b341aaf0c57b2691eb3, type: 3}
@@ -47,3 +48,7 @@ MonoBehaviour:
     direction: 1
   - time: 9
     direction: 2
+  - time: 10.5
+    direction: 1
+  - time: 11
+    direction: 3

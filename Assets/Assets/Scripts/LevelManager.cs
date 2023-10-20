@@ -11,22 +11,6 @@ public enum Direction
     Right
 }
 
-[System.Serializable]
-public class Note
-{
-    public float time;
-    public Direction direction;  // Cambio de int a Direction
-    /*...*/
-}
-
-[System.Serializable]
-public class Song
-{
-    public AudioClip audioClip;
-    public Note[] notes;
-    /*...*/
-}
-
 
 public class LevelManager : MonoBehaviour
 {

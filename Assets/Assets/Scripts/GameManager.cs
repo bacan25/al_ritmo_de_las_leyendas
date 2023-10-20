@@ -1,40 +1,58 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;  // Importa esta biblioteca para cambiar de escena
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public Slider healthBar;
     public Text scoreText;
-    public int health = 100;
+    public int maxHealth = 100;  // Valor máximo de salud
+    private int health;  // Valor actual de salud
     private int score = 0;
-    public AudioClip failSound;  // Agrega tu clip de audio de fallo aquí
-    private AudioSource audioSource;  // Añade una fuente de audio
+    public AudioClip failSound;
+    private AudioSource audioSource;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        health = maxHealth / 2;  // Inicia la salud en la mitad del valor máximo
+        healthBar.maxValue = maxHealth;  // Establece el valor máximo de la barra de salud
+        healthBar.value = health;  // Establece el valor inicial de la barra de salud
     }
 
     public void NoteHit()
     {
-        health += 10;
+        health += 5;  // Ajusta este valor para que el incremento de salud sea menos pronunciado
         score += 100;
         UpdateUI();
     }
 
     public void NoteMissed()
     {
-        health -= 10;
-        score -= 50;  // Reduce el score cuando se pierde una nota
-        AudioSource.PlayClipAtPoint(failSound, transform.position);  // Reproduce el sonido de fallo
+        health -= 20;  // Ajusta este valor para que la disminución de salud sea más pronunciada
+        score -= 50;
+        AudioSource.PlayClipAtPoint(failSound, transform.position);
         UpdateUI();
 
-        // Comprueba si el juego debe terminar
         if (score < 0 || health <= 0)
         {
             EndGame();
         }
+    }
+    private void EndGame()
+    {
+        // Detener la música
+        AudioSource audioSource = GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
+
+        // Guardar el puntaje (opcional)
+        PlayerPrefs.SetInt("LastScore", score);
+
+        // Cambiar a otra escena
+        SceneManager.LoadScene("GameOverScene");  // Asumiendo que tienes una escena llamada "GameOverScene"
     }
 
     private void UpdateUI()
@@ -43,20 +61,5 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
-    private void EndGame()
-    {
-        audioSource.Stop();  // Detiene la música
-        SceneManager.LoadScene("GameOverScene");  // Cambia a la escena de Game Over
-    }
-
-    void Update()
-    {
-        // Verifica si la canción ha terminado, asumiendo que RhythmEngine está en el mismo GameObject
-        RhythmEngine rhythmEngine = GetComponent<RhythmEngine>();
-        if (!rhythmEngine.audioSource.isPlaying)
-        {
-            // La canción ha terminado, carga la siguiente escena
-            SceneManager.LoadScene("EndScene");
-        }
-    }
+    // ... Resto del código ...
 }
