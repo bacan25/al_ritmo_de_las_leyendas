@@ -413,7 +413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1148652390}
   scoreText: {fileID: 1217672669}
-  health: 100
+  maxHealth: 100
   failSound: {fileID: 8300000, guid: e698f10d46711e94b80c03e16500b567, type: 3}
 --- !u!1 &312937663
 GameObject:
@@ -490,6 +490,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312937663}
   m_CullTransparentMesh: 1
+--- !u!1 &412051550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412051552}
+  - component: {fileID: 412051551}
+  m_Layer: 0
+  m_Name: SongParser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &412051551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412051550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dbdb8e64061af4faa716e8a3355882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePath: D:\git hub\alritmodelasleyendas\Al_Ritmo_de_las_Leyendas\Assets\Assets\Resources\Songs\notes.chart
+  songAsset: {fileID: 11400000, guid: b3f4cca6aa65f494aa759dbc468459c4, type: 2}
+--- !u!4 &412051552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412051550}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9139565, y: 0.13863301, z: -0.08306995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &430895295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2190,3 +2236,4 @@ SceneRoots:
   - {fileID: 197348752}
   - {fileID: 1039548848}
   - {fileID: 430895296}
+  - {fileID: 412051552}
