@@ -26,25 +26,32 @@ public class SongParser : MonoBehaviour
 
         string[] sections = fileContents.Split(new string[] { "[Song]", "[SyncTrack]", "[ExpertSingle]" }, System.StringSplitOptions.None);
 
+        // Declarar songName y newSongAsset al inicio del método
+        string songName = string.Empty;
+        SongAsset newSongAsset = ScriptableObject.CreateInstance<SongAsset>();
+
         // Parse Song Section
         string[] songLines = sections[0].Split(new string[] { "\n" }, System.StringSplitOptions.RemoveEmptyEntries);
-        string songName = "";
-         foreach (string line in songLines)
-    {
-        if (line.StartsWith("Name = "))
+        foreach (string line in songLines)
         {
-            // Extraer el nombre de la canción
-            string extractedSongName = "test";
-            
-            // Crear un nuevo SongAsset
-            SongAsset newAsset = ScriptableObject.CreateInstance<SongAsset>();
-            newAsset.song = new Song { Name = extractedSongName };
+            // Eliminar espacios en blanco al inicio y al final de la línea
+            string trimmedLine = line.Trim();
 
-            // Guardar el nuevo SongAsset
-            SaveSongAsset(newAsset);
-            break;  // Salir del bucle una vez que hayas encontrado y procesado el nombre de la canción
+            // Ahora verificar si la línea comienza con "Name = "
+            if (trimmedLine.StartsWith("Name = "))
+            {
+                // Extraer el nombre de la canción
+                songName = trimmedLine.Substring(7).Trim('"');  // Asumiendo que el nombre está entre comillas
+
+                // Configurar las propiedades del nuevo SongAsset
+                newSongAsset.song = new Song { Name = songName };
+
+                // Guardar el nuevo SongAsset
+                SaveSongAsset(newSongAsset);
+                break;  // Salir del bucle una vez que hayas encontrado y procesado el nombre de la canción
+            }
         }
-    }
+
         // Aquí asumo que tienes una forma de obtener el AudioClip. Si no la tienes, 
         // tendrás que determinar cómo obtener o asignar el AudioClip.
         AudioClip audioClip = null;  // Reemplaza null con tu AudioClip
@@ -69,29 +76,18 @@ public class SongParser : MonoBehaviour
             }
         }
 
-        // Crear un nuevo SongAsset
-        SongAsset newSongAsset = ScriptableObject.CreateInstance<SongAsset>();
+        // Configurar las propiedades del newSongAsset ya existente
+        newSongAsset.song.audioClip = audioClip;
+        newSongAsset.song.notes = notesList.ToArray();
 
-        // Configurar las propiedades del nuevo SongAsset
-        newSongAsset.song = new Song
-        {
-            Name = songName,
-            audioClip = audioClip,
-            notes = notesList.ToArray()
-        };
-
-        // Guardar el nuevo SongAsset
+        // Guardar el newSongAsset ya existente
         SaveSongAsset(newSongAsset);
     }
 
-
-
 #if UNITY_EDITOR
     void SaveSongAsset(SongAsset asset)
-{
-    string path = "Assets/Resources/Songs/" + asset.song.Name + ".asset";
-    // ...resto del código...
-
+    {
+        string path = "Assets/Resources/Songs/" + asset.song.Name + ".asset";
         AssetDatabase.CreateAsset(asset, path);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
