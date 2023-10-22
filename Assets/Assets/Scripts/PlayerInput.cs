@@ -23,6 +23,7 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(key))
         {
+            
             Collider2D[] notes = Physics2D.OverlapBoxAll(detecCollider.bounds.center, detecCollider.bounds.size, 0f);
             bool noteHit = false;
 

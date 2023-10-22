@@ -39,10 +39,10 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Audio Source: " + rhythmEngine.audioSource);
         Debug.Log("Song Asset: " + songAsset);
 
-        if (nextNoteIndex < songAsset.notes.Length && rhythmEngine.audioSource.time >= songAsset.notes[nextNoteIndex].time)
+        if (nextNoteIndex < songAsset.song.notes.Length && rhythmEngine.audioSource.time >= songAsset.song.notes[nextNoteIndex].time)
         {
             Debug.Log("Instantiating Note");
-            int direction = (int)songAsset.notes[nextNoteIndex].direction;
+            int direction = (int)songAsset.song.notes[nextNoteIndex].direction;
             Vector3 spawnPosition = spawnPoints[direction].position;
             Instantiate(notePrefabs[direction], spawnPosition, Quaternion.identity);
             nextNoteIndex++;
