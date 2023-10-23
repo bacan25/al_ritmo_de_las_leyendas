@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,9 @@ public class RhythmEngine : MonoBehaviour
     public float bpm;
     private float beatInterval;
     private float nextBeatTime;
+
+    // Definir un evento que se dispare en cada beat
+    public event Action OnBeat;
 
     void Start()
     {
@@ -26,7 +30,7 @@ public class RhythmEngine : MonoBehaviour
         if (audioSource.time >= nextBeatTime)
         {
             nextBeatTime += beatInterval;
-            // Lógica para manejar lo que sucede en cada beat.
+            OnBeat?.Invoke(); // Disparar el evento en cada beat
         }
     }
 }
