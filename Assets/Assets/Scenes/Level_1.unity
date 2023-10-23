@@ -519,8 +519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74dbdb8e64061af4faa716e8a3355882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: D:\git hub\alritmodelasleyendas\Al_Ritmo_de_las_Leyendas\Assets\Assets\Resources\Songs\notes.chart
-  songAsset: {fileID: 11400000, guid: b3f4cca6aa65f494aa759dbc468459c4, type: 2}
+  filePath: D:\git hub\alritmodelasleyendas\Al_Ritmo_de_las_Leyendas\Assets\Resources\Charts
+    por convertir\Segundo nivel\Segundo Nivel.chart
+  songAsset: {fileID: 11400000, guid: a0fd0d438ce79e64fbc8c5480a85e9b0, type: 2}
 --- !u!4 &412051552
 Transform:
   m_ObjectHideFlags: 0
@@ -2141,7 +2142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 498745982}
-  bpm: 0
+  bpm: 115
 --- !u!1 &2144191286
 GameObject:
   m_ObjectHideFlags: 0

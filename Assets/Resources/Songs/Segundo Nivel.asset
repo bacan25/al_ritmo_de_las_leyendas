@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   song:
     Name: Segundo Nivel
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 6809ec286cb50034fa1babdc06fc09b6, type: 3}
     notes:
     - time: 1.6
       direction: 1
@@ -838,5 +838,5 @@ MonoBehaviour:
       direction: 2
     - time: 24.192
       direction: 3
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 6809ec286cb50034fa1babdc06fc09b6, type: 3}
   notes: []

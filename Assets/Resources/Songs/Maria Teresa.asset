@@ -368,5 +368,5 @@ MonoBehaviour:
       direction: 2
     - time: 27.264
       direction: 3
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: aafd005439319c4418f006f6c50753db, type: 3}
   notes: []
