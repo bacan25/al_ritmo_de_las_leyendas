@@ -14,829 +14,829 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   song:
     Name: Segundo Nivel
-    audioClip: {fileID: 8300000, guid: 6809ec286cb50034fa1babdc06fc09b6, type: 3}
+    audioClip: {fileID: 0}
     notes:
-    - time: 1.6
+    - time: 6.25
       direction: 1
-    - time: 1.6
+    - time: 6.25
       direction: 2
-    - time: 1.792
+    - time: 7
       direction: 2
-    - time: 1.792
+    - time: 7
       direction: 3
-    - time: 1.984
+    - time: 7.75
       direction: 1
-    - time: 1.984
+    - time: 7.75
       direction: 2
-    - time: 2.176
+    - time: 8.5
       direction: 2
-    - time: 2.176
+    - time: 8.5
       direction: 3
-    - time: 2.368
+    - time: 9.25
       direction: 1
-    - time: 2.368
+    - time: 9.25
       direction: 2
-    - time: 2.56
+    - time: 10
       direction: 2
-    - time: 2.56
+    - time: 10
       direction: 3
-    - time: 2.752
+    - time: 10.75
       direction: 1
-    - time: 2.752
+    - time: 10.75
       direction: 2
-    - time: 2.816
+    - time: 11
       direction: 1
-    - time: 2.816
+    - time: 11
       direction: 2
-    - time: 2.944
+    - time: 11.5
       direction: 2
-    - time: 2.944
+    - time: 11.5
       direction: 3
-    - time: 3.008
+    - time: 11.75
       direction: 2
-    - time: 3.008
+    - time: 11.75
       direction: 3
-    - time: 3.136
+    - time: 12.25
       direction: 1
-    - time: 3.136
+    - time: 12.25
       direction: 2
-    - time: 3.2
+    - time: 12.5
       direction: 1
-    - time: 3.2
+    - time: 12.5
       direction: 2
-    - time: 3.328
+    - time: 13
       direction: 2
-    - time: 3.328
+    - time: 13
       direction: 3
-    - time: 3.392
+    - time: 13.25
       direction: 2
-    - time: 3.392
+    - time: 13.25
       direction: 3
-    - time: 3.52
+    - time: 13.75
       direction: 1
-    - time: 3.52
+    - time: 13.75
       direction: 2
-    - time: 3.584
+    - time: 14
       direction: 1
-    - time: 3.584
+    - time: 14
       direction: 2
-    - time: 3.712
+    - time: 14.5
       direction: 0
-    - time: 3.712
+    - time: 14.5
       direction: 1
-    - time: 3.776
+    - time: 14.75
       direction: 0
-    - time: 3.776
+    - time: 14.75
       direction: 1
-    - time: 3.904
+    - time: 15.25
       direction: 2
-    - time: 3.904
+    - time: 15.25
       direction: 3
-    - time: 3.968
+    - time: 15.5
       direction: 2
-    - time: 3.968
+    - time: 15.5
       direction: 3
-    - time: 4.096
-      direction: 0
-    - time: 4.096
-      direction: 2
-    - time: 4.16
-      direction: 0
-    - time: 4.16
-      direction: 2
-    - time: 4.288
-      direction: 1
-    - time: 4.288
-      direction: 3
-    - time: 4.352
-      direction: 1
-    - time: 4.352
-      direction: 3
-    - time: 4.48
-      direction: 0
-    - time: 4.48
-      direction: 2
-    - time: 4.544
-      direction: 0
-    - time: 4.544
-      direction: 2
-    - time: 4.672
-      direction: 0
-    - time: 4.672
-      direction: 1
-    - time: 4.736
-      direction: 0
-    - time: 4.736
-      direction: 1
-    - time: 4.8
-      direction: 2
-    - time: 4.864
-      direction: 3
-    - time: 4.928
-      direction: 2
-    - time: 4.928
-      direction: 3
-    - time: 4.992
-      direction: 2
-    - time: 5.056
-      direction: 3
-    - time: 5.12
-      direction: 2
-    - time: 5.12
-      direction: 3
-    - time: 5.184
-      direction: 1
-    - time: 5.248
-      direction: 0
-    - time: 5.312
-      direction: 0
-    - time: 5.312
-      direction: 1
-    - time: 5.376
-      direction: 0
-    - time: 5.44
-      direction: 2
-    - time: 5.504
-      direction: 1
-    - time: 5.504
-      direction: 2
-    - time: 5.568
-      direction: 3
-    - time: 5.632
-      direction: 2
-    - time: 5.696
-      direction: 2
-    - time: 5.696
-      direction: 3
-    - time: 5.76
-      direction: 0
-    - time: 5.824
-      direction: 1
-    - time: 5.888
-      direction: 0
-    - time: 5.888
-      direction: 1
-    - time: 5.952
-      direction: 2
-    - time: 6.016
-      direction: 1
-    - time: 6.016
-      direction: 3
-    - time: 6.08
-      direction: 1
-    - time: 6.08
-      direction: 3
-    - time: 6.144
-      direction: 0
-    - time: 6.208
-      direction: 2
-    - time: 6.272
-      direction: 0
-    - time: 6.272
-      direction: 2
-    - time: 6.336
-      direction: 3
-    - time: 6.4
-      direction: 2
-    - time: 6.464
-      direction: 2
-    - time: 6.464
-      direction: 3
-    - time: 6.592
-      direction: 3
-    - time: 6.592
-      direction: 4
-    - time: 6.656
-      direction: 3
-    - time: 6.784
-      direction: 2
-    - time: 6.912
-      direction: 2
-    - time: 7.04
-      direction: 2
-    - time: 7.168
-      direction: 3
-    - time: 7.296
-      direction: 2
-    - time: 7.424
-      direction: 2
-    - time: 7.488
-      direction: 1
-    - time: 7.616
-      direction: 2
-    - time: 7.744
-      direction: 1
-    - time: 7.872
-      direction: 2
-    - time: 8
-      direction: 2
-    - time: 8.256
-      direction: 3
-    - time: 8.384
-      direction: 1
-    - time: 8.384
-      direction: 2
-    - time: 8.448
-      direction: 1
-    - time: 8.448
-      direction: 2
-    - time: 8.512
-      direction: 1
-    - time: 8.512
-      direction: 2
-    - time: 8.576
-      direction: 0
-    - time: 8.576
-      direction: 3
-    - time: 8.64
-      direction: 0
-    - time: 8.64
-      direction: 3
-    - time: 8.704
-      direction: 0
-    - time: 8.704
-      direction: 3
-    - time: 8.768
-      direction: 0
-    - time: 8.768
-      direction: 3
-    - time: 8.832
-      direction: 0
-    - time: 8.832
-      direction: 3
-    - time: 8.896
-      direction: 1
-    - time: 8.896
-      direction: 2
-    - time: 8.96
-      direction: 1
-    - time: 8.96
-      direction: 2
-    - time: 9.024
-      direction: 1
-    - time: 9.024
-      direction: 2
-    - time: 9.088
-      direction: 1
-    - time: 9.088
-      direction: 2
-    - time: 9.152
-      direction: 2
-    - time: 9.152
-      direction: 3
-    - time: 9.216
-      direction: 2
-    - time: 9.216
-      direction: 3
-    - time: 9.344
-      direction: 0
-    - time: 9.344
-      direction: 1
-    - time: 9.408
-      direction: 0
-    - time: 9.408
-      direction: 1
-    - time: 9.536
-      direction: 1
-    - time: 9.6
-      direction: 2
-    - time: 9.728
-      direction: 3
-    - time: 9.792
-      direction: 0
-    - time: 9.92
-      direction: 3
-    - time: 9.984
-      direction: 1
-    - time: 10.112
-      direction: 2
-    - time: 10.176
-      direction: 0
-    - time: 10.304
-      direction: 3
-    - time: 10.368
-      direction: 1
-    - time: 10.496
-      direction: 3
-    - time: 10.56
-      direction: 0
-    - time: 10.688
-      direction: 1
-    - time: 10.752
-      direction: 2
-    - time: 10.752
-      direction: 3
-    - time: 10.816
-      direction: 3
-    - time: 10.88
-      direction: 2
-    - time: 10.944
-      direction: 1
-    - time: 11.008
-      direction: 2
-    - time: 11.008
-      direction: 3
-    - time: 11.072
-      direction: 3
-    - time: 11.136
-      direction: 2
-    - time: 11.2
-      direction: 1
-    - time: 11.264
-      direction: 2
-    - time: 11.264
-      direction: 3
-    - time: 11.392
-      direction: 1
-    - time: 11.392
-      direction: 3
-    - time: 11.456
-      direction: 2
-    - time: 11.456
-      direction: 3
-    - time: 11.584
-      direction: 0
-    - time: 11.584
-      direction: 2
-    - time: 11.648
-      direction: 0
-    - time: 11.648
-      direction: 1
-    - time: 11.776
-      direction: 0
-    - time: 11.776
-      direction: 3
-    - time: 11.84
-      direction: 1
-    - time: 11.84
-      direction: 2
-    - time: 11.968
-      direction: 2
-    - time: 11.968
-      direction: 3
-    - time: 12.032
-      direction: 0
-    - time: 12.032
-      direction: 3
-    - time: 12.16
-      direction: 1
-    - time: 12.16
-      direction: 2
-    - time: 12.224
-      direction: 2
-    - time: 12.224
-      direction: 3
-    - time: 12.352
-      direction: 1
-    - time: 12.352
-      direction: 2
-    - time: 12.416
-      direction: 2
-    - time: 12.416
-      direction: 3
-    - time: 12.544
-      direction: 1
-    - time: 12.544
-      direction: 2
-    - time: 12.608
-      direction: 1
-    - time: 12.608
-      direction: 2
-    - time: 12.736
-      direction: 1
-    - time: 12.736
-      direction: 3
-    - time: 12.8
-      direction: 0
-    - time: 12.8
-      direction: 2
-    - time: 12.928
-      direction: 0
-    - time: 12.928
-      direction: 2
-    - time: 12.992
-      direction: 1
-    - time: 12.992
-      direction: 3
-    - time: 13.12
-      direction: 2
-    - time: 13.184
-      direction: 2
-    - time: 13.312
-      direction: 3
-    - time: 13.376
-      direction: 2
-    - time: 13.44
-      direction: 1
-    - time: 13.504
-      direction: 0
-    - time: 13.568
-      direction: 1
-    - time: 13.632
-      direction: 2
-    - time: 13.696
-      direction: 3
-    - time: 13.76
-      direction: 3
-    - time: 13.824
-      direction: 2
-    - time: 13.888
-      direction: 1
-    - time: 13.952
-      direction: 0
-    - time: 14.016
-      direction: 0
-    - time: 14.08
-      direction: 1
-    - time: 14.144
-      direction: 2
-    - time: 14.208
-      direction: 3
-    - time: 14.272
-      direction: 2
-    - time: 14.336
-      direction: 2
-    - time: 14.4
-      direction: 1
-    - time: 14.464
-      direction: 1
-    - time: 14.528
-      direction: 0
-    - time: 14.592
-      direction: 0
-    - time: 14.656
-      direction: 1
-    - time: 14.72
-      direction: 1
-    - time: 14.784
-      direction: 2
-    - time: 14.848
-      direction: 3
-    - time: 14.912
-      direction: 3
-    - time: 14.976
-      direction: 3
-    - time: 15.04
-      direction: 2
-    - time: 15.104
-      direction: 1
-    - time: 15.168
-      direction: 1
-    - time: 15.232
-      direction: 0
-    - time: 15.232
-      direction: 1
-    - time: 15.296
-      direction: 2
-    - time: 15.36
-      direction: 2
-    - time: 15.424
-      direction: 2
-    - time: 15.424
-      direction: 3
-    - time: 15.488
-      direction: 1
-    - time: 15.552
-      direction: 1
-    - time: 15.616
-      direction: 0
-    - time: 15.616
-      direction: 1
-    - time: 15.68
-      direction: 2
-    - time: 15.744
-      direction: 2
-    - time: 15.808
-      direction: 2
-    - time: 15.808
-      direction: 3
-    - time: 15.872
-      direction: 1
-    - time: 15.936
-      direction: 1
     - time: 16
-      direction: 1
+      direction: 0
     - time: 16
-      direction: 3
-    - time: 16.064
       direction: 2
-    - time: 16.128
-      direction: 2
-    - time: 16.192
+    - time: 16.25
       direction: 0
-    - time: 16.192
+    - time: 16.25
       direction: 2
-    - time: 16.256
+    - time: 16.75
       direction: 1
-    - time: 16.32
+    - time: 16.75
+      direction: 3
+    - time: 17
       direction: 1
-    - time: 16.384
-      direction: 1
-    - time: 16.384
-      direction: 2
-    - time: 16.448
+    - time: 17
+      direction: 3
+    - time: 17.5
       direction: 0
-    - time: 16.448
-      direction: 3
-    - time: 16.512
+    - time: 17.5
+      direction: 2
+    - time: 17.75
       direction: 0
-    - time: 16.512
-      direction: 3
-    - time: 16.576
-      direction: 1
-    - time: 16.576
+    - time: 17.75
       direction: 2
-    - time: 16.64
-      direction: 3
-    - time: 16.704
-      direction: 3
-    - time: 16.768
+    - time: 18.25
       direction: 0
-    - time: 16.768
+    - time: 18.25
       direction: 1
-    - time: 16.832
-      direction: 3
-    - time: 16.896
-      direction: 3
-    - time: 16.96
+    - time: 18.5
       direction: 0
-    - time: 16.96
+    - time: 18.5
       direction: 1
-    - time: 17.024
+    - time: 18.75
       direction: 2
-    - time: 17.088
+    - time: 19
+      direction: 3
+    - time: 19.25
       direction: 2
-    - time: 17.152
+    - time: 19.25
+      direction: 3
+    - time: 19.5
+      direction: 2
+    - time: 19.75
+      direction: 3
+    - time: 20
+      direction: 2
+    - time: 20
+      direction: 3
+    - time: 20.25
+      direction: 1
+    - time: 20.5
       direction: 0
-    - time: 17.152
-      direction: 1
-    - time: 17.28
+    - time: 20.75
       direction: 0
-    - time: 17.28
+    - time: 20.75
       direction: 1
-    - time: 17.344
-      direction: 3
-    - time: 17.408
-      direction: 2
-    - time: 17.472
-      direction: 1
-    - time: 17.536
+    - time: 21
       direction: 0
-    - time: 17.6
+    - time: 21.25
       direction: 2
-    - time: 17.664
-      direction: 2
-    - time: 17.728
-      direction: 3
-    - time: 17.792
+    - time: 21.5
       direction: 1
-    - time: 17.856
-      direction: 1
-    - time: 17.92
+    - time: 21.5
       direction: 2
-    - time: 17.984
+    - time: 21.75
       direction: 3
-    - time: 18.048
+    - time: 22
       direction: 2
-    - time: 18.112
-      direction: 1
-    - time: 18.112
-      direction: 3
-    - time: 18.176
-      direction: 1
-    - time: 18.176
-      direction: 3
-    - time: 18.24
-      direction: 1
-    - time: 18.24
-      direction: 3
-    - time: 18.304
+    - time: 22.25
       direction: 2
-    - time: 18.368
-      direction: 2
-    - time: 18.496
+    - time: 22.25
+      direction: 3
+    - time: 22.5
       direction: 0
-    - time: 18.496
+    - time: 22.75
       direction: 1
-    - time: 18.56
+    - time: 23
+      direction: 0
+    - time: 23
+      direction: 1
+    - time: 23.25
       direction: 2
-    - time: 18.56
+    - time: 23.5
+      direction: 1
+    - time: 23.5
       direction: 3
-    - time: 18.688
-      direction: 0
-    - time: 18.688
+    - time: 23.75
       direction: 1
-    - time: 18.752
-      direction: 2
-    - time: 18.752
-      direction: 3
-    - time: 18.88
-      direction: 1
-    - time: 18.88
-      direction: 2
-    - time: 18.944
-      direction: 0
-    - time: 18.944
-      direction: 3
-    - time: 19.072
-      direction: 0
-    - time: 19.072
-      direction: 3
-    - time: 19.136
-      direction: 1
-    - time: 19.136
-      direction: 2
-    - time: 19.264
-      direction: 0
-    - time: 19.264
-      direction: 1
-    - time: 19.328
-      direction: 2
-    - time: 19.328
-      direction: 3
-    - time: 19.456
-      direction: 0
-    - time: 19.456
-      direction: 1
-    - time: 19.52
-      direction: 2
-    - time: 19.52
-      direction: 3
-    - time: 19.648
-      direction: 0
-    - time: 19.648
-      direction: 3
-    - time: 19.712
-      direction: 0
-    - time: 19.712
-      direction: 3
-    - time: 19.84
-      direction: 1
-    - time: 19.84
-      direction: 2
-    - time: 19.904
-      direction: 1
-    - time: 19.904
-      direction: 2
-    - time: 20.032
-      direction: 0
-    - time: 20.032
-      direction: 1
-    - time: 20.096
-      direction: 1
-    - time: 20.096
-      direction: 2
-    - time: 20.224
-      direction: 1
-    - time: 20.224
-      direction: 2
-    - time: 20.288
-      direction: 0
-    - time: 20.288
-      direction: 1
-    - time: 20.416
-      direction: 2
-    - time: 20.416
-      direction: 3
-    - time: 20.48
-      direction: 1
-    - time: 20.48
-      direction: 2
-    - time: 20.608
-      direction: 2
-    - time: 20.608
-      direction: 3
-    - time: 20.672
-      direction: 2
-    - time: 20.672
-      direction: 3
-    - time: 20.8
-      direction: 0
-    - time: 20.8
-      direction: 1
-    - time: 20.864
-      direction: 0
-    - time: 20.864
-      direction: 1
-    - time: 20.992
-      direction: 1
-    - time: 21.056
-      direction: 2
-    - time: 21.12
-      direction: 0
-    - time: 21.12
-      direction: 3
-    - time: 21.312
-      direction: 3
-    - time: 21.376
-      direction: 2
-    - time: 21.44
-      direction: 0
-    - time: 21.44
-      direction: 3
-    - time: 21.568
-      direction: 0
-    - time: 21.568
-      direction: 3
-    - time: 21.632
-      direction: 1
-    - time: 21.632
-      direction: 2
-    - time: 21.76
-      direction: 0
-    - time: 21.76
-      direction: 3
-    - time: 21.824
-      direction: 0
-    - time: 21.824
-      direction: 3
-    - time: 21.952
-      direction: 1
-    - time: 21.952
-      direction: 2
-    - time: 22.016
-      direction: 1
-    - time: 22.144
-      direction: 2
-    - time: 22.144
-      direction: 3
-    - time: 22.208
-      direction: 3
-    - time: 22.336
-      direction: 1
-    - time: 22.336
-      direction: 2
-    - time: 22.4
-      direction: 1
-    - time: 22.528
-      direction: 0
-    - time: 22.528
-      direction: 1
-    - time: 22.592
-      direction: 0
-    - time: 22.72
-      direction: 2
-    - time: 22.72
-      direction: 3
-    - time: 22.784
-      direction: 3
-    - time: 22.848
-      direction: 0
-    - time: 22.848
-      direction: 1
-    - time: 22.912
-      direction: 0
-    - time: 22.976
-      direction: 1
-    - time: 23.04
-      direction: 0
-    - time: 23.104
-      direction: 0
-    - time: 23.168
-      direction: 1
-    - time: 23.232
-      direction: 2
-    - time: 23.296
-      direction: 0
-    - time: 23.296
-      direction: 3
-    - time: 23.36
-      direction: 0
-    - time: 23.36
-      direction: 3
-    - time: 23.424
-      direction: 3
-    - time: 23.488
-      direction: 2
-    - time: 23.552
-      direction: 1
-    - time: 23.616
-      direction: 0
-    - time: 23.68
-      direction: 1
-    - time: 23.744
-      direction: 2
-    - time: 23.808
-      direction: 3
-    - time: 23.872
-      direction: 0
-    - time: 23.872
-      direction: 2
-    - time: 23.936
+    - time: 23.75
       direction: 3
     - time: 24
       direction: 0
-    - time: 24.064
+    - time: 24.25
+      direction: 2
+    - time: 24.5
       direction: 0
-    - time: 24.064
+    - time: 24.5
+      direction: 2
+    - time: 24.75
       direction: 3
-    - time: 24.128
+    - time: 25
       direction: 2
-    - time: 24.192
+    - time: 25.25
+      direction: 2
+    - time: 25.25
+      direction: 3
+    - time: 25.75
+      direction: 3
+    - time: 25.75
+      direction: 4
+    - time: 26
+      direction: 3
+    - time: 26.5
+      direction: 2
+    - time: 27
+      direction: 2
+    - time: 27.5
+      direction: 2
+    - time: 28
+      direction: 3
+    - time: 28.5
+      direction: 2
+    - time: 29
+      direction: 2
+    - time: 29.25
       direction: 1
-    - time: 24.192
+    - time: 29.75
       direction: 2
-    - time: 24.192
+    - time: 30.25
+      direction: 1
+    - time: 30.75
+      direction: 2
+    - time: 31.25
+      direction: 2
+    - time: 32.25
+      direction: 3
+    - time: 32.75
+      direction: 1
+    - time: 32.75
+      direction: 2
+    - time: 33
+      direction: 1
+    - time: 33
+      direction: 2
+    - time: 33.25
+      direction: 1
+    - time: 33.25
+      direction: 2
+    - time: 33.5
+      direction: 0
+    - time: 33.5
+      direction: 3
+    - time: 33.75
+      direction: 0
+    - time: 33.75
+      direction: 3
+    - time: 34
+      direction: 0
+    - time: 34
+      direction: 3
+    - time: 34.25
+      direction: 0
+    - time: 34.25
+      direction: 3
+    - time: 34.5
+      direction: 0
+    - time: 34.5
+      direction: 3
+    - time: 34.75
+      direction: 1
+    - time: 34.75
+      direction: 2
+    - time: 35
+      direction: 1
+    - time: 35
+      direction: 2
+    - time: 35.25
+      direction: 1
+    - time: 35.25
+      direction: 2
+    - time: 35.5
+      direction: 1
+    - time: 35.5
+      direction: 2
+    - time: 35.75
+      direction: 2
+    - time: 35.75
+      direction: 3
+    - time: 36
+      direction: 2
+    - time: 36
+      direction: 3
+    - time: 36.5
+      direction: 0
+    - time: 36.5
+      direction: 1
+    - time: 36.75
+      direction: 0
+    - time: 36.75
+      direction: 1
+    - time: 37.25
+      direction: 1
+    - time: 37.5
+      direction: 2
+    - time: 38
+      direction: 3
+    - time: 38.25
+      direction: 0
+    - time: 38.75
+      direction: 3
+    - time: 39
+      direction: 1
+    - time: 39.5
+      direction: 2
+    - time: 39.75
+      direction: 0
+    - time: 40.25
+      direction: 3
+    - time: 40.5
+      direction: 1
+    - time: 41
+      direction: 3
+    - time: 41.25
+      direction: 0
+    - time: 41.75
+      direction: 1
+    - time: 42
+      direction: 2
+    - time: 42
+      direction: 3
+    - time: 42.25
+      direction: 3
+    - time: 42.5
+      direction: 2
+    - time: 42.75
+      direction: 1
+    - time: 43
+      direction: 2
+    - time: 43
+      direction: 3
+    - time: 43.25
+      direction: 3
+    - time: 43.5
+      direction: 2
+    - time: 43.75
+      direction: 1
+    - time: 44
+      direction: 2
+    - time: 44
+      direction: 3
+    - time: 44.5
+      direction: 1
+    - time: 44.5
+      direction: 3
+    - time: 44.75
+      direction: 2
+    - time: 44.75
+      direction: 3
+    - time: 45.25
+      direction: 0
+    - time: 45.25
+      direction: 2
+    - time: 45.5
+      direction: 0
+    - time: 45.5
+      direction: 1
+    - time: 46
+      direction: 0
+    - time: 46
+      direction: 3
+    - time: 46.25
+      direction: 1
+    - time: 46.25
+      direction: 2
+    - time: 46.75
+      direction: 2
+    - time: 46.75
+      direction: 3
+    - time: 47
+      direction: 0
+    - time: 47
+      direction: 3
+    - time: 47.5
+      direction: 1
+    - time: 47.5
+      direction: 2
+    - time: 47.75
+      direction: 2
+    - time: 47.75
+      direction: 3
+    - time: 48.25
+      direction: 1
+    - time: 48.25
+      direction: 2
+    - time: 48.5
+      direction: 2
+    - time: 48.5
+      direction: 3
+    - time: 49
+      direction: 1
+    - time: 49
+      direction: 2
+    - time: 49.25
+      direction: 1
+    - time: 49.25
+      direction: 2
+    - time: 49.75
+      direction: 1
+    - time: 49.75
+      direction: 3
+    - time: 50
+      direction: 0
+    - time: 50
+      direction: 2
+    - time: 50.5
+      direction: 0
+    - time: 50.5
+      direction: 2
+    - time: 50.75
+      direction: 1
+    - time: 50.75
+      direction: 3
+    - time: 51.25
+      direction: 2
+    - time: 51.5
+      direction: 2
+    - time: 52
+      direction: 3
+    - time: 52.25
+      direction: 2
+    - time: 52.5
+      direction: 1
+    - time: 52.75
+      direction: 0
+    - time: 53
+      direction: 1
+    - time: 53.25
+      direction: 2
+    - time: 53.5
+      direction: 3
+    - time: 53.75
+      direction: 3
+    - time: 54
+      direction: 2
+    - time: 54.25
+      direction: 1
+    - time: 54.5
+      direction: 0
+    - time: 54.75
+      direction: 0
+    - time: 55
+      direction: 1
+    - time: 55.25
+      direction: 2
+    - time: 55.5
+      direction: 3
+    - time: 55.75
+      direction: 2
+    - time: 56
+      direction: 2
+    - time: 56.25
+      direction: 1
+    - time: 56.5
+      direction: 1
+    - time: 56.75
+      direction: 0
+    - time: 57
+      direction: 0
+    - time: 57.25
+      direction: 1
+    - time: 57.5
+      direction: 1
+    - time: 57.75
+      direction: 2
+    - time: 58
+      direction: 3
+    - time: 58.25
+      direction: 3
+    - time: 58.5
+      direction: 3
+    - time: 58.75
+      direction: 2
+    - time: 59
+      direction: 1
+    - time: 59.25
+      direction: 1
+    - time: 59.5
+      direction: 0
+    - time: 59.5
+      direction: 1
+    - time: 59.75
+      direction: 2
+    - time: 60
+      direction: 2
+    - time: 60.25
+      direction: 2
+    - time: 60.25
+      direction: 3
+    - time: 60.5
+      direction: 1
+    - time: 60.75
+      direction: 1
+    - time: 61
+      direction: 0
+    - time: 61
+      direction: 1
+    - time: 61.25
+      direction: 2
+    - time: 61.5
+      direction: 2
+    - time: 61.75
+      direction: 2
+    - time: 61.75
+      direction: 3
+    - time: 62
+      direction: 1
+    - time: 62.25
+      direction: 1
+    - time: 62.5
+      direction: 1
+    - time: 62.5
+      direction: 3
+    - time: 62.75
+      direction: 2
+    - time: 63
+      direction: 2
+    - time: 63.25
+      direction: 0
+    - time: 63.25
+      direction: 2
+    - time: 63.5
+      direction: 1
+    - time: 63.75
+      direction: 1
+    - time: 64
+      direction: 1
+    - time: 64
+      direction: 2
+    - time: 64.25
+      direction: 0
+    - time: 64.25
+      direction: 3
+    - time: 64.5
+      direction: 0
+    - time: 64.5
+      direction: 3
+    - time: 64.75
+      direction: 1
+    - time: 64.75
+      direction: 2
+    - time: 65
+      direction: 3
+    - time: 65.25
+      direction: 3
+    - time: 65.5
+      direction: 0
+    - time: 65.5
+      direction: 1
+    - time: 65.75
+      direction: 3
+    - time: 66
+      direction: 3
+    - time: 66.25
+      direction: 0
+    - time: 66.25
+      direction: 1
+    - time: 66.5
+      direction: 2
+    - time: 66.75
+      direction: 2
+    - time: 67
+      direction: 0
+    - time: 67
+      direction: 1
+    - time: 67.5
+      direction: 0
+    - time: 67.5
+      direction: 1
+    - time: 67.75
+      direction: 3
+    - time: 68
+      direction: 2
+    - time: 68.25
+      direction: 1
+    - time: 68.5
+      direction: 0
+    - time: 68.75
+      direction: 2
+    - time: 69
+      direction: 2
+    - time: 69.25
+      direction: 3
+    - time: 69.5
+      direction: 1
+    - time: 69.75
+      direction: 1
+    - time: 70
+      direction: 2
+    - time: 70.25
+      direction: 3
+    - time: 70.5
+      direction: 2
+    - time: 70.75
+      direction: 1
+    - time: 70.75
+      direction: 3
+    - time: 71
+      direction: 1
+    - time: 71
+      direction: 3
+    - time: 71.25
+      direction: 1
+    - time: 71.25
+      direction: 3
+    - time: 71.5
+      direction: 2
+    - time: 71.75
+      direction: 2
+    - time: 72.25
+      direction: 0
+    - time: 72.25
+      direction: 1
+    - time: 72.5
+      direction: 2
+    - time: 72.5
+      direction: 3
+    - time: 73
+      direction: 0
+    - time: 73
+      direction: 1
+    - time: 73.25
+      direction: 2
+    - time: 73.25
+      direction: 3
+    - time: 73.75
+      direction: 1
+    - time: 73.75
+      direction: 2
+    - time: 74
+      direction: 0
+    - time: 74
+      direction: 3
+    - time: 74.5
+      direction: 0
+    - time: 74.5
+      direction: 3
+    - time: 74.75
+      direction: 1
+    - time: 74.75
+      direction: 2
+    - time: 75.25
+      direction: 0
+    - time: 75.25
+      direction: 1
+    - time: 75.5
+      direction: 2
+    - time: 75.5
+      direction: 3
+    - time: 76
+      direction: 0
+    - time: 76
+      direction: 1
+    - time: 76.25
+      direction: 2
+    - time: 76.25
+      direction: 3
+    - time: 76.75
+      direction: 0
+    - time: 76.75
+      direction: 3
+    - time: 77
+      direction: 0
+    - time: 77
+      direction: 3
+    - time: 77.5
+      direction: 1
+    - time: 77.5
+      direction: 2
+    - time: 77.75
+      direction: 1
+    - time: 77.75
+      direction: 2
+    - time: 78.25
+      direction: 0
+    - time: 78.25
+      direction: 1
+    - time: 78.5
+      direction: 1
+    - time: 78.5
+      direction: 2
+    - time: 79
+      direction: 1
+    - time: 79
+      direction: 2
+    - time: 79.25
+      direction: 0
+    - time: 79.25
+      direction: 1
+    - time: 79.75
+      direction: 2
+    - time: 79.75
+      direction: 3
+    - time: 80
+      direction: 1
+    - time: 80
+      direction: 2
+    - time: 80.5
+      direction: 2
+    - time: 80.5
+      direction: 3
+    - time: 80.75
+      direction: 2
+    - time: 80.75
+      direction: 3
+    - time: 81.25
+      direction: 0
+    - time: 81.25
+      direction: 1
+    - time: 81.5
+      direction: 0
+    - time: 81.5
+      direction: 1
+    - time: 82
+      direction: 1
+    - time: 82.25
+      direction: 2
+    - time: 82.5
+      direction: 0
+    - time: 82.5
+      direction: 3
+    - time: 83.25
+      direction: 3
+    - time: 83.5
+      direction: 2
+    - time: 83.75
+      direction: 0
+    - time: 83.75
+      direction: 3
+    - time: 84.25
+      direction: 0
+    - time: 84.25
+      direction: 3
+    - time: 84.5
+      direction: 1
+    - time: 84.5
+      direction: 2
+    - time: 85
+      direction: 0
+    - time: 85
+      direction: 3
+    - time: 85.25
+      direction: 0
+    - time: 85.25
+      direction: 3
+    - time: 85.75
+      direction: 1
+    - time: 85.75
+      direction: 2
+    - time: 86
+      direction: 1
+    - time: 86.5
+      direction: 2
+    - time: 86.5
+      direction: 3
+    - time: 86.75
+      direction: 3
+    - time: 87.25
+      direction: 1
+    - time: 87.25
+      direction: 2
+    - time: 87.5
+      direction: 1
+    - time: 88
+      direction: 0
+    - time: 88
+      direction: 1
+    - time: 88.25
+      direction: 0
+    - time: 88.75
+      direction: 2
+    - time: 88.75
+      direction: 3
+    - time: 89
+      direction: 3
+    - time: 89.25
+      direction: 0
+    - time: 89.25
+      direction: 1
+    - time: 89.5
+      direction: 0
+    - time: 89.75
+      direction: 1
+    - time: 90
+      direction: 0
+    - time: 90.25
+      direction: 0
+    - time: 90.5
+      direction: 1
+    - time: 90.75
+      direction: 2
+    - time: 91
+      direction: 0
+    - time: 91
+      direction: 3
+    - time: 91.25
+      direction: 0
+    - time: 91.25
+      direction: 3
+    - time: 91.5
+      direction: 3
+    - time: 91.75
+      direction: 2
+    - time: 92
+      direction: 1
+    - time: 92.25
+      direction: 0
+    - time: 92.5
+      direction: 1
+    - time: 92.75
+      direction: 2
+    - time: 93
+      direction: 3
+    - time: 93.25
+      direction: 0
+    - time: 93.25
+      direction: 2
+    - time: 93.5
+      direction: 3
+    - time: 93.75
+      direction: 0
+    - time: 94
+      direction: 0
+    - time: 94
+      direction: 3
+    - time: 94.25
+      direction: 2
+    - time: 94.5
+      direction: 1
+    - time: 94.5
+      direction: 2
+    - time: 94.5
       direction: 3
   audioClip: {fileID: 8300000, guid: 6809ec286cb50034fa1babdc06fc09b6, type: 3}
   notes: []

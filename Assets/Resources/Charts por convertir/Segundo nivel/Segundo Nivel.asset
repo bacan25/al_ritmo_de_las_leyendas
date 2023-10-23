@@ -16,5 +16,5 @@ MonoBehaviour:
     Name: 
     audioClip: {fileID: 0}
     notes: []
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 6809ec286cb50034fa1babdc06fc09b6, type: 3}
   notes: []

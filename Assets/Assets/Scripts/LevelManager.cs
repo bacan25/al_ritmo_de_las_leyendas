@@ -36,12 +36,42 @@ public class LevelManager : MonoBehaviour
 
     void HandleBeat() // Manejar cada beat
     {
-        if (nextNoteIndex < songAsset.song.notes.Length && rhythmEngine.audioSource.time >= songAsset.song.notes[nextNoteIndex].time)
+        float resolution = 192; // Esto debe ser obtenido de tu archivo de la canción
+
+        Debug.Log("HandleBeat called. nextNoteIndex: " + nextNoteIndex + ", songAsset.song.notes.Length: " + songAsset.song.notes.Length);
+
+        if (nextNoteIndex < songAsset.song.notes.Length)
         {
-            int direction = (int)songAsset.song.notes[nextNoteIndex].direction;
-            Vector3 spawnPosition = spawnPoints[direction].position;
-            Instantiate(notePrefabs[direction], spawnPosition, Quaternion.identity);
-            nextNoteIndex++;
+            float noteTimeInBeats = songAsset.song.notes[nextNoteIndex].time;
+            float noteTimeInSeconds = noteTimeInBeats / resolution * (60 / rhythmEngine.bpm);
+
+            Debug.Log("AudioSource time: " + rhythmEngine.audioSource.time + ", noteTimeInSeconds: " + noteTimeInSeconds);
+
+            if (rhythmEngine.audioSource.time >= noteTimeInSeconds)
+            {
+                int direction = (int)songAsset.song.notes[nextNoteIndex].direction;
+
+                // Ajustar valores de dirección fuera de rango
+                if (direction > 3)
+                {
+                    direction = 3; // Cambiar valores de dirección mayores que 3 a 3
+                }
+
+                // Ahora puedes usar 'direction' para instanciar la nota como lo hacías antes
+                if (direction >= 0 && direction < spawnPoints.Length && direction < notePrefabs.Length)
+                {
+                    Vector3 spawnPosition = spawnPoints[direction].position;
+                    Instantiate(notePrefabs[direction], spawnPosition, Quaternion.identity);
+                    nextNoteIndex++;
+                }
+                else
+                {
+                    Debug.LogError("Invalid direction value: " + direction + ". Skipping note.");
+                    nextNoteIndex++; // Incrementa nextNoteIndex para evitar quedarse atascado en una nota con un valor de dirección inválido
+                }
+            }
         }
     }
+
+
 }

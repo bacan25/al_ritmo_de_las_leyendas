@@ -46,12 +46,19 @@ public class SongParser : MonoBehaviour
 
             foreach (Match lineMatch in Regex.Matches(expertSingleSection, @"(\d+)\s*=\s*N\s*(\d+)"))
             {
-                int time = int.Parse(lineMatch.Groups[1].Value);
+                int timeInTicks = int.Parse(lineMatch.Groups[1].Value);
                 int directionValue = int.Parse(lineMatch.Groups[2].Value);
                 Direction direction = (Direction)(directionValue);
+
+                // Asumiendo que bpm y resolution están definidos y son correctos
+                float bpm = 80;  // Ajusta esto según tu canción
+                float resolution = 192;  // Ajusta esto según tu canción
+
+                float timeInSeconds = (timeInTicks / resolution) * (60 / bpm);
+
                 Note newNote = new Note
                 {
-                    time = time / 1000f,  // Convierte milisegundos a segundos
+                    time = timeInSeconds,
                     direction = direction
                 };
                 notesList.Add(newNote);
