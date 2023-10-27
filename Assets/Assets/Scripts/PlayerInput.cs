@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class PlayerInput : MonoBehaviour
 {
     public GameManager gameManager;
     public GameObject[] spawnPoints;
+    public Animator anim; 
 
     void Update()
     {
-        CheckInput(KeyCode.LeftArrow, 0);
-        CheckInput(KeyCode.DownArrow, 1);
-        CheckInput(KeyCode.UpArrow, 2);
-        CheckInput(KeyCode.RightArrow, 3);
+        CheckInput(KeyCode.LeftArrow, 0, "LeftTrigger", "FailTrigger");
+        CheckInput(KeyCode.DownArrow, 1, "DownTrigger", "FailTrigger");
+        CheckInput(KeyCode.UpArrow, 2, "UpTrigger", "FailTrigger");
+        CheckInput(KeyCode.RightArrow, 3, "RightTrigger", "FailTrigger");
     }
 
-    void CheckInput(KeyCode key, int index)
+    void CheckInput(KeyCode key, int index, string successTrigger, string failTrigger)
     {
         GameObject spawnPoint = spawnPoints[index];
         Transform detecTransform = spawnPoint.transform.GetChild(0);
@@ -23,7 +25,6 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(key))
         {
-            
             Collider2D[] notes = Physics2D.OverlapBoxAll(detecCollider.bounds.center, detecCollider.bounds.size, 0f);
             bool noteHit = false;
 
@@ -41,14 +42,17 @@ public class PlayerInput : MonoBehaviour
             {
                 detecSpriteRenderer.color = Color.green;
                 gameManager.NoteHit();
+                anim.SetTrigger("press1"); 
             }
             else
             {
+                Debug.Log("Entró");
                 detecSpriteRenderer.color = Color.red;
                 gameManager.NoteMissed();
+                anim.SetTrigger("miss"); 
             }
         }
-        else if (Input.GetKeyUp(key))
+        else if (Input.GetKeyUp(key)) 
         {
             detecSpriteRenderer.color = Color.white;
         }

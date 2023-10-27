@@ -16,6 +16,8 @@ public class LevelManager : MonoBehaviour
     public GameObject[] notePrefabs;
     public Transform[] spawnPoints;
     private int nextNoteIndex = 0;
+    public GameManager gameManager; // Referencia al GameManager
+
     private RhythmEngine rhythmEngine;
 
     void Start()
@@ -31,6 +33,13 @@ public class LevelManager : MonoBehaviour
         else
         {
             Debug.LogError("RhythmEngine or AudioSource is not set");
+        }
+    }
+    void Update()
+    {
+        if (nextNoteIndex >= songAsset.song.notes.Length && GameObject.FindGameObjectsWithTag("Note").Length == 0)
+        {
+            gameManager.WinGame(); // Llamar a una función para manejar ganar el juego
         }
     }
 
