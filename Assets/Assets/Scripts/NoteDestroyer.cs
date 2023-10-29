@@ -6,11 +6,13 @@ public class NoteDestroyer : MonoBehaviour
 {
     public GameManager gameManager;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Note"))
         {
-            gameManager.NoteMissed();
+            if(gameManager.gameOver == false){
+                gameManager.NoteMissed();
+            }
             Destroy(other.gameObject);
         }
     }

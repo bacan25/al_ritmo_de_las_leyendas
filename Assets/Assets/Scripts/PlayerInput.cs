@@ -9,13 +9,13 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
-        CheckInput(KeyCode.LeftArrow, 0);
-        CheckInput(KeyCode.DownArrow, 1);
-        CheckInput(KeyCode.UpArrow, 2);
-        CheckInput(KeyCode.RightArrow, 3);
+        CheckInput(KeyCode.LeftArrow, 0, "LeftTrigger", "FailTrigger");
+        CheckInput(KeyCode.DownArrow, 1, "DownTrigger", "FailTrigger");
+        CheckInput(KeyCode.UpArrow, 2, "UpTrigger", "FailTrigger");
+        CheckInput(KeyCode.RightArrow, 3, "RightTrigger", "FailTrigger");
     }
 
-    void CheckInput(KeyCode key, int index)
+    void CheckInput(KeyCode key, int index, string successTrigger, string failTrigger)
     {
         GameObject spawnPoint = spawnPoints[index];
         Transform detecTransform = spawnPoint.transform.GetChild(0);
@@ -41,6 +41,7 @@ public class PlayerInput : MonoBehaviour
             {
                 detecSpriteRenderer.color = Color.green;
                 gameManager.NoteHit();
+                
             }
             else
             {
@@ -48,7 +49,7 @@ public class PlayerInput : MonoBehaviour
                 gameManager.NoteMissed();
             }
         }
-        else if (Input.GetKeyUp(key))
+        else if (Input.GetKeyUp(key)) 
         {
             detecSpriteRenderer.color = Color.white;
         }
