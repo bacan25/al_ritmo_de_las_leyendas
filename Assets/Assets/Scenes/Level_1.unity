@@ -288,7 +288,6 @@ MonoBehaviour:
   - {fileID: 1039548847}
   - {fileID: 197348751}
   - {fileID: 430895295}
-  anim: {fileID: 541263310}
 --- !u!4 &112889327
 Transform:
   m_ObjectHideFlags: 0
@@ -417,7 +416,9 @@ MonoBehaviour:
   maxHealth: 100
   comboText: {fileID: 0}
   failSound: {fileID: 8300000, guid: e698f10d46711e94b80c03e16500b567, type: 3}
-  playerAnim: {fileID: 541263310}
+  audioSource: {fileID: 498745982}
+  playerAnim: {fileID: 541263311}
+  gameOver: 0
 --- !u!1 &412051550
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -901,8 +902,8 @@ Transform:
   m_GameObject: {fileID: 541263307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.57, y: -1.83, z: -0.08306995}
-  m_LocalScale: {x: 0.43126205, y: 0.43126205, z: 0}
+  m_LocalPosition: {x: 6.88, y: -2.7794, z: -0.08306995}
+  m_LocalScale: {x: 0.48473853, y: 0.48473853, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1311,7 +1312,7 @@ GameObject:
   - component: {fileID: 1289239254}
   - component: {fileID: 1289239255}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1326,8 +1327,8 @@ Transform:
   m_GameObject: {fileID: 1289239253}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0144, y: 0.0142, z: 10}
-  m_LocalScale: {x: 17.910664, y: 9.946352, z: 1}
+  m_LocalPosition: {x: 1.07, y: 0.7, z: 10}
+  m_LocalScale: {x: 1.1796333, y: 0.92087877, z: 0.06586207}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -1373,8 +1374,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f47052e77552ef641b009af2de3a90f3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2093,6 +2094,9 @@ MonoBehaviour:
   - {fileID: 1039548848}
   - {fileID: 430895296}
   gameManager: {fileID: 0}
+  songDuration: 74
+  songPart: 10
+  enemyAnim: {fileID: 1346538183}
 --- !u!114 &1960738052
 MonoBehaviour:
   m_ObjectHideFlags: 0

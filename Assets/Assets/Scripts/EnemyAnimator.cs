@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class EnemyAnimator : MonoBehaviour
 {
-    public Animator anim; 
+   public Animator anim; 
 
-    private void Start()
-    {
-     anim.GetComponent<Animator>();
-    }
+  private void Start()
+  {
+    anim.GetComponent<Animator>();
+  }
 
-   public void Hit()
-   {
-     anim.SetTrigger("hit");
+  public void Hit()
+  {
+    anim.SetTrigger("hit");
 
-   }
+  }
 
-   public void Dead()
-   {
-     anim.SetBool("dead", true);
+  public void Dead()
+  {
+    anim.SetBool("dead", true);
 
-   }
+  }
    
    
 }

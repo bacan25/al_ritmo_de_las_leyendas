@@ -10,7 +10,9 @@ public class NoteDestroyer : MonoBehaviour
     {
         if (other.CompareTag("Note"))
         {
-            gameManager.NoteMissed();
+            if(gameManager.gameOver == false){
+                gameManager.NoteMissed();
+            }
             Destroy(other.gameObject);
         }
     }

@@ -5,30 +5,54 @@ using UnityEngine;
 public class CharacterAnimator : MonoBehaviour
 {
     public Animator anim;
+    private int random;
     
     void Start()
     {
         anim.GetComponent<Animator>();
     }
 
-    public void Press1()
+    void Press1()
     {
         anim.SetTrigger("press1");
     }
     
-    public void Press2()
+    void Press2()
     {
         anim.SetTrigger("press2");
     }
 
-    public void Press3()
+    void Press3()
     {
         anim.SetTrigger("press3");
     }
 
-    public void Press4()
+    void Press4()
     {
         anim.SetTrigger("press4");
+    }
+
+    public void AnimSelector()
+    {
+        random = Random.Range(0,4);
+        switch(random){
+            case 0:
+                Press1();
+                break;
+            case 1:
+                Press2();
+                break;
+            case 2:
+                Press3();
+                break;
+            case 3:
+                Press4();
+                break;
+            default:
+                print("Error");
+                break;  
+        }
+        
     }
 
     public void MissANote()
@@ -38,7 +62,6 @@ public class CharacterAnimator : MonoBehaviour
 
     public void LoseGame()
     {
-        anim.SetTrigger("miss");
         anim.SetBool("lose", true);
         
     }

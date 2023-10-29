@@ -9,21 +9,34 @@ public class GameManager : MonoBehaviour
     public int maxHealth = 100;  // Valor máximo de salud
     private int health;  // Valor actual de salud
     private int score = 0;
+
     public Text comboText; // Referencia a un objeto de texto UI para mostrar el combo
     private int comboCount = 0; // Contador de combo
     private int comboLevel = 1;
-    public AudioClip failSound;
-    private AudioSource audioSource;
 
-    public Animator playerAnim;
+    public AudioClip failSound;
+    public AudioSource audioSource;
+
+    public CharacterAnimator playerAnim;
+    public bool gameOver = false;
+
 
     void Start()
     {
-        playerAnim.GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
-        health = 60;
+        playerAnim.GetComponent<CharacterAnimator>();
+        audioSource.GetComponent<AudioSource>();
+        health = 70;
         healthBar.maxValue = maxHealth;  // Establece el valor máximo de la barra de salud
         healthBar.value = health;  // Establece el valor inicial de la barra de salud
+    }
+
+    void Update()
+    {
+        if (score < 0 || health <= 0)
+        {
+            gameOver = true;
+            EndGame();
+        }
     }
 
     public void NoteHit()
@@ -33,8 +46,7 @@ public class GameManager : MonoBehaviour
         }
         
         comboCount++; 
-
-        playerAnim.SetTrigger("press1");
+        playerAnim.AnimSelector();
 
         // Verificar si se ha alcanzado un nuevo nivel de combo
         if (comboCount % 10 == 0 && comboLevel < 10)
@@ -49,26 +61,23 @@ public class GameManager : MonoBehaviour
     }
     public void NoteMissed()
     {
-        playerAnim.SetTrigger("miss");
-        health -= 20;
-        score -= 50 * comboLevel; // También puedes considerar multiplicar la penalización por el nivel de combo
-        comboCount = 0; // Reiniciar el contador de combo
-        comboLevel = 1; // Reiniciar el nivel de combo
-        AudioSource.PlayClipAtPoint(failSound, transform.position);
+        playerAnim.MissANote();
+        if(gameOver == false){  
+            health -= 1;
+            score -= 50 * comboLevel; // También puedes considerar multiplicar la penalización por el nivel de combo
+            comboCount = 0; // Reiniciar el contador de combo
+            comboLevel = 1; // Reiniciar el nivel de combo
+            AudioSource.PlayClipAtPoint(failSound, transform.position);
+        
+        }
+        
         UpdateUI();
 
-        if (score < 0 || health <= 0)
-        {
-            EndGame();
-        }
     }
     private void EndGame()
     {
-        
-        playerAnim.SetBool("lose", true);
+        playerAnim.LoseGame();
 
-        // Detener la música
-        AudioSource audioSource = GetComponent<AudioSource>();
         if (audioSource != null)
         {
             audioSource.Stop();
@@ -83,6 +92,7 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         // Código para manejar ganar el juego, como cargar una nueva escena
+        playerAnim.Won();
         SceneManager.LoadScene("WinScene");
     }
 

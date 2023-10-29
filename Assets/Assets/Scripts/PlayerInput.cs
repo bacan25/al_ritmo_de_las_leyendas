@@ -6,7 +6,6 @@ public class PlayerInput : MonoBehaviour
 {
     public GameManager gameManager;
     public GameObject[] spawnPoints;
-    public Animator anim; 
 
     void Update()
     {
@@ -42,14 +41,12 @@ public class PlayerInput : MonoBehaviour
             {
                 detecSpriteRenderer.color = Color.green;
                 gameManager.NoteHit();
-                anim.SetTrigger("press1"); 
+                
             }
             else
             {
-                Debug.Log("Entró");
                 detecSpriteRenderer.color = Color.red;
                 gameManager.NoteMissed();
-                anim.SetTrigger("miss"); 
             }
         }
         else if (Input.GetKeyUp(key)) 

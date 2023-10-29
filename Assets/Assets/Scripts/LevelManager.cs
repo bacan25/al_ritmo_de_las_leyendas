@@ -20,9 +20,22 @@ public class LevelManager : MonoBehaviour
 
     private RhythmEngine rhythmEngine;
 
+    //Animaciones de las leyendas
+    [SerializeField]
+    private float songDuration;
+    [SerializeField]
+    private float songPart;
+    private float enemyDamaged;
+    private float cronometer;
+    private float checkDurationSong;
+    public EnemyAnimator enemyAnim;
+
+
     void Start()
     {
         rhythmEngine = GetComponent<RhythmEngine>();
+        enemyAnim.GetComponent<EnemyAnimator>();
+
         rhythmEngine.OnBeat += HandleBeat; // Suscribirse al evento OnBeat
 
         if (rhythmEngine.audioSource != null)
@@ -32,29 +45,44 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("RhythmEngine or AudioSource is not set");
+            //Debug.LogError("RhythmEngine or AudioSource is not set");
         }
     }
     void Update()
     {
         if (nextNoteIndex >= songAsset.song.notes.Length && GameObject.FindGameObjectsWithTag("Note").Length == 0)
         {
-            gameManager.WinGame(); // Llamar a una función para manejar ganar el juego
+            gameManager.WinGame(); 
+            
         }
+        
+        //Animaciones enemigos
+        cronometer += Time.deltaTime;
+        checkDurationSong += Time.deltaTime;
+        if(cronometer >= (songDuration/songPart)){
+            enemyAnim.Hit();
+            cronometer = 0;
+        }
+
+        if(checkDurationSong >= songDuration){
+            enemyAnim.Dead();
+        }
+
+
     }
 
     void HandleBeat() // Manejar cada beat
     {
         float resolution = 192; // Esto debe ser obtenido de tu archivo de la canción
 
-        Debug.Log("HandleBeat called. nextNoteIndex: " + nextNoteIndex + ", songAsset.song.notes.Length: " + songAsset.song.notes.Length);
+        //Debug.Log("HandleBeat called. nextNoteIndex: " + nextNoteIndex + ", songAsset.song.notes.Length: " + songAsset.song.notes.Length);
 
         if (nextNoteIndex < songAsset.song.notes.Length)
         {
             float noteTimeInBeats = songAsset.song.notes[nextNoteIndex].time;
             float noteTimeInSeconds = noteTimeInBeats / resolution * (60 / rhythmEngine.bpm);
 
-            Debug.Log("AudioSource time: " + rhythmEngine.audioSource.time + ", noteTimeInSeconds: " + noteTimeInSeconds);
+            //Debug.Log("AudioSource time: " + rhythmEngine.audioSource.time + ", noteTimeInSeconds: " + noteTimeInSeconds);
 
             if (rhythmEngine.audioSource.time >= noteTimeInSeconds)
             {
@@ -75,7 +103,7 @@ public class LevelManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogError("Invalid direction value: " + direction + ". Skipping note.");
+                    //Debug.LogError("Invalid direction value: " + direction + ". Skipping note.");
                     nextNoteIndex++; // Incrementa nextNoteIndex para evitar quedarse atascado en una nota con un valor de dirección inválido
                 }
             }
