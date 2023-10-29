@@ -283,15 +283,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 214555141}
-<<<<<<< HEAD
-  spawnPoints: []
-=======
   spawnPoints:
   - {fileID: 163111320}
   - {fileID: 1039548847}
   - {fileID: 197348751}
   - {fileID: 430895295}
->>>>>>> Miguel
 --- !u!4 &112889327
 Transform:
   m_ObjectHideFlags: 0
@@ -2097,13 +2093,10 @@ MonoBehaviour:
   - {fileID: 197348752}
   - {fileID: 1039548848}
   - {fileID: 430895296}
-<<<<<<< HEAD
-=======
   gameManager: {fileID: 0}
   songDuration: 74
   songPart: 10
   enemyAnim: {fileID: 1346538183}
->>>>>>> Miguel
 --- !u!114 &1960738052
 MonoBehaviour:
   m_ObjectHideFlags: 0
