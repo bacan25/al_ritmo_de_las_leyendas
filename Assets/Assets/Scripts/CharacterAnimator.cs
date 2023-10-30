@@ -9,7 +9,7 @@ public class CharacterAnimator : MonoBehaviour
     
     void Start()
     {
-        anim.GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     void Press1()
