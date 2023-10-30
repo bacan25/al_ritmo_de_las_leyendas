@@ -64,7 +64,9 @@ public class GameManager : MonoBehaviour
         playerAnim.MissANote();
         if(gameOver == false){  
             health -= 1;
-            score -= 50 * comboLevel; // También puedes considerar multiplicar la penalización por el nivel de combo
+            if(score > 0){
+                 score -= 50 * comboLevel;
+            }
             comboCount = 0; // Reiniciar el contador de combo
             comboLevel = 1; // Reiniciar el nivel de combo
             AudioSource.PlayClipAtPoint(failSound, transform.position);

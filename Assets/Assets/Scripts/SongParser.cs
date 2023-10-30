@@ -77,7 +77,7 @@ public class SongParser : MonoBehaviour
         };
 
         // Guardar el nuevo SongAsset
-        SaveSongAsset(newSongAsset);
+        //SaveSongAsset(newSongAsset);
     }
 #if UNITY_EDITOR
     void SaveSongAsset(SongAsset asset)
