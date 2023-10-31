@@ -12,6 +12,7 @@ public enum Direction
 
 public class LevelManager : MonoBehaviour
 {
+    private float lastNoteTime;
     public SongAsset songAsset;
     public GameObject[] notePrefabs;
     public Transform[] spawnPoints;
@@ -29,6 +30,8 @@ public class LevelManager : MonoBehaviour
     private float cronometer;
     private float checkDurationSong;
     public EnemyAnimator enemyAnim;
+    private float timeSinceLastNote = 0f; // Contador desde la última nota
+
 
 
     void Start()
@@ -50,26 +53,26 @@ public class LevelManager : MonoBehaviour
     }
     void Update()
     {
-        if (nextNoteIndex >= songAsset.song.notes.Length && GameObject.FindGameObjectsWithTag("Note").Length == 0)
+        int notesInScene = GameObject.FindGameObjectsWithTag("Note").Length;
+
+        // Si no hay notas en la escena, incrementar el contador
+        if (notesInScene == 0)
         {
-            gameManager.WinGame(); 
-            
-        }
-        
-        //Animaciones enemigos
-        cronometer += Time.deltaTime;
-        checkDurationSong += Time.deltaTime;
-        if(cronometer >= (songDuration/songPart)){
-            enemyAnim.Hit();
-            cronometer = 0;
-        }
+            timeSinceLastNote += Time.deltaTime;
 
-        if(checkDurationSong >= songDuration){
-            enemyAnim.Dead();
+            if (timeSinceLastNote >= 3f)
+            {
+                gameManager.WinGame();
+                Debug.Log("Win Game");
+                timeSinceLastNote = 0f; // Restablecer el contador
+            }
         }
-
-
+        else // Si hay notas en la escena, restablecer el contador
+        {
+            timeSinceLastNote = 0f;
+        }
     }
+
 
     void HandleBeat() // Manejar cada beat
     {
