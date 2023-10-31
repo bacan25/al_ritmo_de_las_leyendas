@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public CharacterAnimator playerAnim;
     public bool gameOver = false;
 
+    //Trancisión
+    public GameObject fade;
+    public GameObject canvaGO;
 
     void Start()
     {
@@ -42,7 +45,7 @@ public class GameManager : MonoBehaviour
     public void NoteHit()
     {
         if(health <= 100){
-            health += 5;
+            health += 10;
         }
         
         comboCount++; 
@@ -63,9 +66,9 @@ public class GameManager : MonoBehaviour
     {
         playerAnim.MissANote();
         if(gameOver == false){  
-            health -= 1;
+            health -= 10;
             if(score > 0){
-                 score -= 50 * comboLevel;
+                score -= 50 * comboLevel;
             }
             comboCount = 0; // Reiniciar el contador de combo
             comboLevel = 1; // Reiniciar el nivel de combo
@@ -84,18 +87,18 @@ public class GameManager : MonoBehaviour
         {
             audioSource.Stop();
         }
-
+        Invoke("FadeIn", 2f);
+        Invoke("CanvaRestart", 2.5f);
         // Guardar el puntaje (opcional)
         PlayerPrefs.SetInt("LastScore", score);
 
-        // Cambiar a otra escena
-        SceneManager.LoadScene("GameOverScene");  // Asumiendo que tienes una escena llamada "GameOverScene"
+        
     }
     public void WinGame()
     {
         // Código para manejar ganar el juego, como cargar una nueva escena
         playerAnim.Won();
-        SceneManager.LoadScene("WinScene");
+        SceneManager.LoadScene(2);
     }
 
     private void UpdateUI()
@@ -105,5 +108,13 @@ public class GameManager : MonoBehaviour
         comboText.text = "Combo: " + comboCount; // Mostrar el combo
     }
 
-    // ... Resto del código ...
+    void FadeIn()
+    {
+        fade.SetActive(true);
+    }
+
+    void CanvaRestart()
+    {
+        canvaGO.SetActive(true);
+    }
 }
