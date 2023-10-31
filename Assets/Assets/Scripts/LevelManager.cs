@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     public GameObject[] notePrefabs;
     public Transform[] spawnPoints;
     private int nextNoteIndex = 0;
-    public GameManager gameManager; // Referencia al GameManager
+    public GameManager gameManager; 
 
     private RhythmEngine rhythmEngine;
 
@@ -36,6 +36,7 @@ public class LevelManager : MonoBehaviour
     {
         rhythmEngine = GetComponent<RhythmEngine>();
         enemyAnim.GetComponent<EnemyAnimator>();
+        gameManager.GetComponent<GameManager>();
 
         rhythmEngine.OnBeat += HandleBeat; // Suscribirse al evento OnBeat
 
@@ -67,7 +68,10 @@ public class LevelManager : MonoBehaviour
 
         if(checkDurationSong >= songDuration){
             enemyAnim.Dead();
+            gameManager.WinGame(); 
         }
+
+      
 
 
     }

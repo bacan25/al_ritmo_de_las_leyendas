@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         playerAnim.GetComponent<CharacterAnimator>();
         audioSource.GetComponent<AudioSource>();
-        health = 70;
+        health = 60;
         healthBar.maxValue = maxHealth;  // Establece el valor máximo de la barra de salud
         healthBar.value = health;  // Establece el valor inicial de la barra de salud
     }
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     public void NoteHit()
     {
         if(health <= 100){
-            health += 10;
+            health += 7;
         }
         
         comboCount++; 
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
     {
         playerAnim.MissANote();
         if(gameOver == false){  
-            health -= 1;
+            health -= 12;
             if(score > 0){
                 score -= 50 * comboLevel;
             }
@@ -96,9 +96,15 @@ public class GameManager : MonoBehaviour
     }
     public void WinGame()
     {
-        // Código para manejar ganar el juego, como cargar una nueva escena
         playerAnim.Won();
+        Invoke("Final", 3f);
+        
+    }
+
+    public void Final()
+    {   
         SceneManager.LoadScene(2);
+
     }
 
     private void UpdateUI()
