@@ -54,14 +54,14 @@ public class PlayerInput : MonoBehaviour
 
         if (noteHit)
         {
-            detecSpriteRenderer.color = Color.green;
             gameManager.NoteHit();
+            detecSpriteRenderer.color = Color.green;
 
         }
         else
         {
-            detecSpriteRenderer.color = Color.red;
             gameManager.NoteMissed();
+            detecSpriteRenderer.color = Color.red;
 
         }
 
@@ -70,7 +70,7 @@ public class PlayerInput : MonoBehaviour
 
     IEnumerator ResetColorCoroutine(SpriteRenderer spriteRenderer)
     {
-        yield return new WaitForSeconds(0.5f); // Espera medio segundo antes de restablecer el color
+        yield return new WaitForSeconds(0.2f); // Espera medio segundo antes de restablecer el color
         spriteRenderer.color = Color.white;
     }
 }

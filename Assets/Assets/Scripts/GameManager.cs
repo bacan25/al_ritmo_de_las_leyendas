@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
     {
         playerAnim.MissANote();
         if(gameOver == false){  
-            health -= 10;
+            health -= 1;
             if(score > 0){
                 score -= 50 * comboLevel;
             }
