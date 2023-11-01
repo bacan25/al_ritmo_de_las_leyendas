@@ -24,7 +24,18 @@ public class PlayerInput : MonoBehaviour
 
     void CheckGamepadInput()
     {
-        // Aquí puedes agregar el código para manejar la entrada del gamepad
+
+        // L2 (Eje 3 en Unity) - Mover Izquierda
+        if (Input.GetAxis("JoystickAxis3") > 0.5f) CheckInput(0, "LeftTrigger", "FailTrigger");
+
+        // L1 (Button 4 en Unity) - Mover Arriba
+        if (Input.GetButtonDown("JoystickButton4")) CheckInput(2, "UpTrigger", "FailTrigger");
+
+        // R1 (Button 5 en Unity) - Mover Abajo
+        if (Input.GetButtonDown("JoystickButton5")) CheckInput(1, "DownTrigger", "FailTrigger");
+
+        // R2 (Eje 4 en Unity) - Mover Derecha
+        if (Input.GetAxis("JoystickAxis4") > 0.5f) CheckInput(3, "RightTrigger", "FailTrigger");
     }
 
     public void OnLeftButtonPressed() => CheckInput(0, "LeftTrigger", "FailTrigger");
