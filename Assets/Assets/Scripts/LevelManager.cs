@@ -52,11 +52,6 @@ public class LevelManager : MonoBehaviour
     }
     void Update()
     {
-        if (nextNoteIndex >= songAsset.song.notes.Length && GameObject.FindGameObjectsWithTag("Note").Length == 0)
-        {
-            gameManager.WinGame(); 
-            
-        }
         
         //Animaciones enemigos
         cronometer += Time.deltaTime;
@@ -66,7 +61,7 @@ public class LevelManager : MonoBehaviour
             cronometer = 0;
         }
 
-        if(checkDurationSong >= songDuration){
+        if(checkDurationSong >= songDuration ){
             enemyAnim.Dead();
             gameManager.WinGame(); 
         }

@@ -24,8 +24,11 @@ public class GameManager : MonoBehaviour
     public GameObject fade;
     public GameObject canvaGO;
 
+    private int currentSceneIndex;
+
     void Start()
     {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         playerAnim.GetComponent<CharacterAnimator>();
         audioSource.GetComponent<AudioSource>();
         health = 60;
@@ -96,14 +99,17 @@ public class GameManager : MonoBehaviour
     }
     public void WinGame()
     {
-        playerAnim.Won();
-        Invoke("Final", 3f);
+        if(gameOver == false){
+            playerAnim.Won();
+            Invoke("Final", 3f);
+        }
+        
         
     }
 
     public void Final()
     {   
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(currentSceneIndex + 1);
 
     }
 
