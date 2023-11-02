@@ -960,6 +960,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b2f2d83dfea304cb8c9730858a7562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inicio: {fileID: 0}
+  tuto1: {fileID: 0}
+  tuto2: {fileID: 0}
 --- !u!1 &522486556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,12 +1987,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: c0607b95b58dd6540b993a674f432605, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c3eef649287ef64e8538b8e3fbe33be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 27.886713, y: 12.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
